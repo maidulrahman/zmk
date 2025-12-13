@@ -10,22 +10,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&lt {
-    flavor = "hold-preferred";
-    quick-tap-ms = <100>;
-    hold-trigger-key-positions = <43>;
-    require-prior-idle-ms = <100>;
-    hold-while-undecided;
-    hold-while-undecided-linger;
-};
-
-&mt {
-    tapping-term-ms = <100>;
-    quick-tap-ms = <140>;
-    flavor = "tap-preferred";
-    hold-trigger-on-release;
-};
-
 / {
     chosen { zmk,physical-layout = &default_layout; };
 };
