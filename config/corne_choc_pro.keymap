@@ -21,6 +21,26 @@
             bindings = <&studio_unlock>;
             key-positions = <28 39 42 43>;
         };
+
+        LBracket {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 17>;
+        };
+
+        RightBracket {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <17 18>;
+        };
+
+        LBrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <23 24>;
+        };
+
+        RBrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <24 25>;
+        };
     };
 
     keymap {
