@@ -11,13 +11,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
+    tapping-term-ms = <140>;
+    retro-tap;
 };
 
 &mt {
     hold-trigger-on-release;
-    quick-tap-ms = <140>;
-    tapping-term-ms = <100>;
-    flavor = "tap-preferred";
+    tapping-term-ms = <140>;
+    hold-while-undecided;
+    hold-trigger-key-positions = <>;
 };
 
 / {
@@ -84,7 +86,7 @@
 &kp GRAVE  &kp EXCL      &kp AT           &kp HASH          &kp DOLLAR         &kp PERCENT     &kp DOLLAR  &kp RCTRL  &kp CARET     &kp AMPERSAND  &kp STAR       &kp UNDER         &kp MINUS     &kp EQUAL
 &trans     &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp LALT    &kp RALT   &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0  &trans
 &trans     &bt BT_CLR    &rgb_ug RGB_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &studio_unlock                         &trans        &trans         &kp LESS_THAN  &kp GREATER_THAN  &trans        &kp NON_US_HASH
-                                          &trans            &trans             &trans                                 &to 0         &trans         &trans
+                                          &trans            &trans             &trans                                 &none         &trans         &trans
             >;
         };
 
