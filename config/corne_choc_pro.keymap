@@ -17,7 +17,9 @@
 
 &mt {
     tapping-term-ms = <140>;
-    hold-trigger-key-positions = <>;
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+    hold-trigger-on-release;
 };
 
 / {
