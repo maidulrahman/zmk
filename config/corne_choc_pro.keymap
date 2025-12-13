@@ -14,7 +14,6 @@
     flavor = "hold-preferred";
     tapping-term-ms = <240>;
     quick-tap-ms = <140>;
-    hold-trigger-on-release;
 };
 
 &mt {
