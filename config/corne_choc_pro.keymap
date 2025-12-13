@@ -51,6 +51,34 @@
         };
     };
 
+    behaviors {
+        HTL: HTL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <10>;
+            hold-while-undecided;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 40 41 42>;
+            hold-trigger-on-release;
+        };
+
+        HTR: HTR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <10>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45 10>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,10 +92,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE                    &kp Q  &kp W           &kp E             &kp R                &kp T                 &kp C_MUTE  &kp C_PP  &kp Y        &kp U               &kp I             &kp O           &kp P     &kp BSPC
-&kp TAB                       &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_CONTROL F   &kp G                 &kp LALT    &kp RALT  &kp H        &mt LEFT_CONTROL J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &kp RETURN
-&mt LEFT_CONTROL NON_US_BSLH  &kp Z  &kp X           &kp C             &kp V                &kp B                                       &kp N        &kp M               &kp COMMA         &kp DOT         &kp FSLH  &kp SINGLE_QUOTE
-                                                     &lt 1 SPACE       &mt LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &mo 2               &mo 3
+&kp ESCAPE                    &kp Q  &kp W            &kp E              &kp R                 &kp T                 &kp C_MUTE  &kp C_PP  &kp Y        &kp U                &kp I              &kp O            &kp P     &kp BSPC
+&kp TAB                       &kp A  &HTL LEFT_ALT S  &HTL LEFT_SHIFT D  &HTL LEFT_CONTROL F   &kp G                 &kp LALT    &kp RALT  &kp H        &HTR LEFT_CONTROL J  &HTR LEFT_SHIFT K  &HTR LEFT_ALT L  &kp SEMI  &kp RETURN
+&mt LEFT_CONTROL NON_US_BSLH  &kp Z  &kp X            &kp C              &kp V                 &kp B                                       &kp N        &kp M                &kp COMMA          &kp DOT          &kp FSLH  &kp SINGLE_QUOTE
+                                                      &lt 1 SPACE        &HTL LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &mo 2                &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
