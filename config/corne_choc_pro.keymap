@@ -16,9 +16,7 @@
 };
 
 &mt {
-    hold-trigger-on-release;
     tapping-term-ms = <140>;
-    hold-while-undecided;
     hold-trigger-key-positions = <>;
 };
 
