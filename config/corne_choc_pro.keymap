@@ -132,10 +132,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp GRAVE                 &kp EXCL      &kp AT           &kp HASH          &kp DOLLAR         &kp PERCENT     &kp DOLLAR  &kp RCTRL  &kp CARET     &kp AMPERSAND  &kp STAR       &kp UNDER         &kp MINUS     &kp EQUAL
-&trans                    &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp LALT    &kp RALT   &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0  &trans
-&kp LS(NON_US_BACKSLASH)  &bt BT_CLR    &rgb_ug RGB_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &studio_unlock                         &trans        &trans         &kp LESS_THAN  &kp GREATER_THAN  &trans        &kp NON_US_HASH
-                                                         &trans            &trans             &trans                                 &to 0         &trans         &trans
+&kp GRAVE                 &kp EXCL      &kp AT        &kp HASH          &kp DOLLAR         &kp PERCENT     &kp DOLLAR  &kp RCTRL  &kp CARET     &kp AMPERSAND  &kp STAR       &kp UNDER         &kp MINUS     &kp EQUAL
+&trans                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp LALT    &kp RALT   &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0  &trans
+&kp LS(NON_US_BACKSLASH)  &none         &none         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &studio_unlock                         &trans        &trans         &kp LESS_THAN  &kp GREATER_THAN  &trans        &kp NON_US_HASH
+                                                      &trans            &trans             &trans                                 &to 0         &trans         &trans
             >;
         };
 
@@ -159,7 +159,7 @@
         System {
             display-name = "SYSTEM";
             bindings = <
-&bootloader      &none            &none            &none         &none         &kp C_VOLUME_UP    &none  &none  &none  &none  &none    &none    &none        &bootloader
+&bootloader      &bt BT_CLR       &none            &none         &none         &kp C_VOLUME_UP    &none  &none  &none  &none  &none    &none    &none        &bootloader
 &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4  &kp C_VOLUME_DOWN  &none  &none  &none  &none  &kp F5   &kp F6   &kp F7       &kp F8
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none         &none         &studio_unlock                   &none  &none  &kp F11  &kp F10  &kp LS(F11)  &kp F8
                                                    &none         &none         &kp K_PLAY_PAUSE                 &none  &none  &trans
