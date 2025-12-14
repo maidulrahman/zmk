@@ -77,6 +77,27 @@
             flavor = "tap-preferred";
             hold-trigger-on-release;
         };
+
+        TDNumber: TDNumber {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDNUMBER";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&to 1>;
+        };
+
+        TDFunction: TDFunction {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDFUNCTION";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&to 2>;
+        };
+
+        TDSystem: TDSystem {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDSYSTEM";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&to 3>;
+        };
     };
 
     keymap {
@@ -95,7 +116,7 @@
 &kp ESCAPE                    &kp Q  &kp W            &kp E              &kp R                 &kp T                 &kp C_MUTE  &kp C_PP  &kp Y        &kp U                &kp I              &kp O            &kp P     &kp BSPC
 &kp TAB                       &kp A  &HTL LEFT_ALT S  &HTL LEFT_SHIFT D  &HTL LEFT_CONTROL F   &kp G                 &kp LALT    &kp RALT  &kp H        &HTR LEFT_CONTROL J  &HTR LEFT_SHIFT K  &HTR LEFT_ALT L  &kp SEMI  &kp RETURN
 &mt LEFT_CONTROL NON_US_BSLH  &kp Z  &kp X            &kp C              &kp V                 &kp B                                       &kp N        &kp M                &kp COMMA          &kp DOT          &kp FSLH  &kp SINGLE_QUOTE
-                                                      &tog 2             &HTL LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &mo 2                &mo 3
+                                                      &kp LEFT_ALT       &HTL LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &TDFunction          &TDSystem
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -114,7 +135,7 @@
 &kp GRAVE  &kp EXCL      &kp AT           &kp HASH          &kp DOLLAR         &kp PERCENT     &kp DOLLAR  &kp RCTRL  &kp CARET     &kp AMPERSAND  &kp STAR       &kp UNDER         &kp MINUS     &kp EQUAL
 &trans     &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp LALT    &kp RALT   &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0  &trans
 &kp PIPE   &bt BT_CLR    &rgb_ug RGB_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &studio_unlock                         &trans        &trans         &kp LESS_THAN  &kp GREATER_THAN  &trans        &kp NON_US_HASH
-                                          &trans            &trans             &trans                                 &none         &trans         &trans
+                                          &trans            &trans             &trans                                 &to 0         &trans         &trans
             >;
         };
 
@@ -131,7 +152,7 @@
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &none   &none  &none  &none     &msc SCRL_DOWN  &msc SCRL_UP  &none            &none      &kp DEL
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none   &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none      &kp PRINTSCREEN
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none                 &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(C)  &kp LC(V)
-                        &tog 2   &trans   &trans                &trans    &to 0           &none
+                        &trans   &trans   &trans                &trans    &trans          &trans
             >;
         };
 
@@ -141,7 +162,7 @@
 &bootloader      &none            &none            &none         &none         &kp C_VOLUME_UP    &none  &none  &none  &none  &none    &none    &none        &bootloader
 &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4  &kp C_VOLUME_DOWN  &none  &none  &none  &none  &kp F5   &kp F6   &kp F7       &kp F8
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none         &none         &studio_unlock                   &none  &none  &kp F11  &kp F10  &kp LS(F11)  &kp F8
-                                                   &none         &none         &kp K_PLAY_PAUSE                 &none  &none  &none
+                                                   &none         &none         &kp K_PLAY_PAUSE                 &none  &none  &trans
             >;
         };
     };
