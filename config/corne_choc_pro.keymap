@@ -95,7 +95,7 @@
 &kp ESCAPE                    &kp Q  &kp W            &kp E              &kp R                 &kp T                 &kp C_MUTE  &kp C_PP  &kp Y        &kp U                &kp I              &kp O            &kp P     &kp BSPC
 &kp TAB                       &kp A  &HTL LEFT_ALT S  &HTL LEFT_SHIFT D  &HTL LEFT_CONTROL F   &kp G                 &kp LALT    &kp RALT  &kp H        &HTR LEFT_CONTROL J  &HTR LEFT_SHIFT K  &HTR LEFT_ALT L  &kp SEMI  &kp RETURN
 &mt LEFT_CONTROL NON_US_BSLH  &kp Z  &kp X            &kp C              &kp V                 &kp B                                       &kp N        &kp M                &kp COMMA          &kp DOT          &kp FSLH  &kp SINGLE_QUOTE
-                                                      &lt 1 SPACE        &HTL LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &mo 2                &mo 3
+                                                      &to 2              &HTL LEFT_GUI ESCAPE  &mt LEFT_SHIFT SPACE                        &lt 1 SPACE  &mo 2                &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -128,10 +128,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp LCTRL  &kp RCTRL  &none     &msc SCRL_DOWN  &msc SCRL_UP  &none            &none      &kp DEL
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp LALT   &kp RALT   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none      &kp PRINTSCREEN
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none                         &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(C)  &kp LC(V)
-                        &trans   &trans   &trans                        &trans    &to 0           &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none   &none  &none  &none     &msc SCRL_DOWN  &msc SCRL_UP  &none            &none      &kp DEL
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &none   &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none      &kp PRINTSCREEN
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none                 &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp LC(C)  &kp LC(V)
+                        &to 0    &trans   &trans                &trans    &to 0           &none
             >;
         };
 
