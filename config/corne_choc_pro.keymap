@@ -20,6 +20,7 @@
     flavor = "tap-preferred";
     quick-tap-ms = <10>;
     hold-trigger-on-release;
+    retro-tap;
 };
 
 / {
