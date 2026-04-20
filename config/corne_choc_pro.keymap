@@ -61,12 +61,12 @@
             key-positions = <32 31>;
         };
 
-        C-C {
+        CS-c {
             bindings = <&kp LC(LS(C))>;
             key-positions = <9 10>;
         };
 
-        C-V {
+        CS-v {
             bindings = <&kp LC(LS(V))>;
             key-positions = <35 36>;
         };
