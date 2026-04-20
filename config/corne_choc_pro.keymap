@@ -50,6 +50,26 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <24 25>;
         };
+
+        C-c {
+            bindings = <&kp LC(C)>;
+            key-positions = <4 3>;
+        };
+
+        C-v {
+            bindings = <&kp LC(V)>;
+            key-positions = <32 31>;
+        };
+
+        C-C {
+            bindings = <&kp LC(LS(C))>;
+            key-positions = <9 10>;
+        };
+
+        C-V {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <35 36>;
+        };
     };
 
     behaviors {
