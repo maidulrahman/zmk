@@ -12,7 +12,9 @@
 
 &lt {
     tapping-term-ms = <140>;
-    retro-tap;
+    quick-tap-ms = <10>;
+    flavor = "tap-preferred";
+    hold-trigger-on-release;
 };
 
 &mt {
